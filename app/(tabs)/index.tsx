@@ -4,7 +4,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import {Post } from '@/components/Post';
+import { Post } from '@/components/Post';
 import { useEffect, useState } from 'react';
 
 export default function HomeScreen() {
@@ -16,7 +16,7 @@ export default function HomeScreen() {
       .then((json) => setPosts(json))
       .catch((error) => console.error(error))
   }
-  , []);
+    , []);
 
   return (
     <ParallaxScrollView
@@ -32,10 +32,9 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       {posts.map((post) => (
-        <Post  data={post} />
+        <Post data={post} />
       ))}
 
-      
     </ParallaxScrollView>
   );
 }
